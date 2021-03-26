@@ -1,0 +1,26 @@
+<div class="container">
+  <h2 class="text-center py-3">Basic Form</h2>
+  <h4 class="text-center mb-4">Value: {{ myForm.value | json }}</h4>
+  <hr />
+  <form [formGroup]="myForm" class="w-50 m-auto">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Email" formControlName="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <textarea
+        matInput
+        type="text"
+        placeholder="Your Message..."
+        formControlName="message"
+        rows="4"
+      ></textarea>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-select placeholder="Career" formControlName="career">
+        <mat-option value="frontend">Front-end</mat-option>
+        <mat-option value="backend">Back-end</mat-option>
+        <mat-option value="fullstack">Full-stack</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </form>
+</div>
