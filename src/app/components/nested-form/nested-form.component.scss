@@ -1,0 +1,13 @@
+form {
+  overflow: hidden;
+}
+.group {
+  display: flex;
+  justify-content: space-between;
+  mat-form-field {
+    flex: 1;
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
