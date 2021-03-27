@@ -31,7 +31,7 @@ export class DynamicFormComponent implements OnInit {
   // method to add formgroup in formArray
   addPhone(): void {
     this.phoneForms.push(
-      this.fb.group({
+      new FormGroup({
         area: new FormControl(''),
         prefix: new FormControl(''),
         line: new FormControl(''),

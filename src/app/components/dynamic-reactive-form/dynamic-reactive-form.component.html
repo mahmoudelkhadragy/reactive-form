@@ -1,0 +1,11 @@
+<div class="container">
+  <h2 class="text-center py-3">Dynamic Reactive Forms 2</h2>
+
+  <!-- our form -->
+  <form [formGroup]="form">
+    <div *ngFor="let prop of personProps">
+      <input type="text" [formControlName]="prop" />
+    </div>
+  </form>
+  <pre>{{ form.value | json }}</pre>
+</div>

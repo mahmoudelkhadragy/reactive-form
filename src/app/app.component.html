@@ -1,15 +1,40 @@
 <nav class="navbar navbar-dark bg-primary">
   <a class="navbar-brand" routerLink="/">Reactive Form</a>
   <div class="d-flex justify-content-end">
-    <a class="nav-link" routerLink="" routerLinkActive="selected">Home</a>
-    <a class="nav-link" routerLink="/basic-form" routerLinkActive="selected"
+    <a
+      class="nav-link"
+      routerLink=""
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
+    <a
+      class="nav-link"
+      routerLink="/basic-form"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
       >Basic Form</a
     >
-    <a class="nav-link" routerLink="/nested-form" routerLinkselected="active"
+    <a
+      class="nav-link"
+      routerLink="/nested-form"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
       >Nested Form</a
     >
-    <a class="nav-link" routerLink="/dynamic-form" routerLinkselected="active"
+    <a
+      class="nav-link"
+      routerLink="/dynamic-form"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
       >Dynamic Form</a
+    >
+    <a
+      class="nav-link"
+      routerLink="/dynamic-reactive-form"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Dynamic Reactive Form</a
     >
   </div>
 </nav>

@@ -16,9 +16,10 @@ import { MatChipsModule } from '@angular/material/chips';
 import { NestedFormComponent } from './components/nested-form/nested-form.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
+import { DynamicReactiveFormComponent } from './components/dynamic-reactive-form/dynamic-reactive-form.component';
 
 @NgModule({
-  declarations: [AppComponent, ReactiveFormComponent, NestedFormComponent, WelcomeComponent, DynamicFormComponent],
+  declarations: [AppComponent, ReactiveFormComponent, NestedFormComponent, WelcomeComponent, DynamicFormComponent, DynamicReactiveFormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
