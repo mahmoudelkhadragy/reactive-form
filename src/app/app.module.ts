@@ -15,9 +15,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatChipsModule } from '@angular/material/chips';
 import { NestedFormComponent } from './components/nested-form/nested-form.component';
 import { WelcomeComponent } from './components/welcome/welcome.component';
+import { DynamicFormComponent } from './components/dynamic-form/dynamic-form.component';
 
 @NgModule({
-  declarations: [AppComponent, ReactiveFormComponent, NestedFormComponent, WelcomeComponent],
+  declarations: [AppComponent, ReactiveFormComponent, NestedFormComponent, WelcomeComponent, DynamicFormComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,0 +1,55 @@
+<div class="container">
+  <h2 class="text-center py-3">Dynamic Reactive Form</h2>
+  <h4 class="text-center mb-4">Value: {{ myForm.value | json }}</h4>
+  <hr />
+  <form class="w-50 m-auto">
+    <mat-form-field>
+      <input
+        matInput
+        type="email"
+        formControlName="email"
+        placeholder="Your Emailaa"
+      />
+    </mat-form-field>
+    <!-- button to add phone controls in formarray -->
+    <button mat-raised-button color="primary" (click)="addPhone()">
+      Add Phone Number
+    </button>
+    <!-- div to show all phone cells from formArray -->
+    <div formArrayName="phones">
+      <div
+        class="group"
+        *ngFor="let phone of phoneForms.controls; let i = index"
+        [formGroupName]="i"
+      >
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Area"
+            formControlName="area"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Prefix"
+            formControlName="prefix"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            type="text"
+            placeholder="Line"
+            formControlName="line"
+          />
+        </mat-form-field>
+        <button mat-raised-button color="warn" (click)="deletePhone(i)">
+          Delete
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
